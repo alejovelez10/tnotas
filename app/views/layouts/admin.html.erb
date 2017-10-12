@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Tnotas</title>
+      <%= csrf_meta_tags %>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+   </head>
+   <body>
+   <div class="">
+      
+  
+      <nav class="navbar navbar-default second-navbar" style="margin-bottom: 0px;">
+         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                  <li  class="li"><p><img src="../../images/contact.jpg" alt="" style="width:40px"> 5115060 / ventastnotas@gmail.com</p></li>
+                  </li>
+                  <li class="li">
+                  </li>
+                  <li class="li">
+                  </li>
+                  <li class="li">
+                  </li>
+                  
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+
+               <li><%= link_to "Sliders", sliders_path %></li>
+               <li><%= link_to "Catalogos",catalogs_path %></li>
+               <li><%= link_to "Categorias",categories_path %></li>
+               <li><%= link_to "Sub Categorias",sub_categories_path %></li>
+               <li><%= link_to "Proveedores", suppliers_path %></li>
+               <li><%= link_to "Productos", products_path %></li>
+              
+               
+
+                  
+                 
+                  
+               </ul>
+               <!--<form class="navbar-form navbar-left">
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                  </form>-->
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container-fluid -->
+      </nav>
+       <%= yield %>
+</div>
+
+   </body>
+</html>
+
+<style>
+.top-log
+{
+  
+  
+}
+.social {
+
+   position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+   right: 0; /* Establecemos la barra en la izquierda */
+   top: 220px; /* Bajamos la barra 200px de arriba a abajo */
+   z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+.social .fa
+{
+
+    font-size: 30px;
+}
+ .navbar-nav .fa
+ {
+  
+ }
+  .navbar-nav a
+ {
+     
+   font-size: 16px;
+       color: #6d6d6d;
+    width: 150px;
+    text-align: center;
+   
+ }
+   .social ul {
+      list-style: none;
+      padding:0px;
+   }
+ 
+   .social ul li a {
+      display: inline-block;
+      color:#fff;
+      background: #000;
+     padding: 4px 8px;
+      text-decoration: none;
+      -webkit-transition:all 500ms ease;
+      -o-transition:all 500ms ease;
+      transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+   }
+ 
+   .social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+   .social ul li .icon-twitter {background: #00abf0;}
+   .social ul li .icon-googleplus {background: #d95232;}
+   .social ul li .icon-pinterest {background: #ae181f;}
+   .social ul li .icon-mail {background: #666666;}
+ 
+   .social ul li a:hover {
+      background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+      padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+   }
+@media (min-width: 1200px)
+{
+.container {
+    width: 1226px;
+}
+ }  
+
+
+</style>
