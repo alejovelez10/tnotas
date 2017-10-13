@@ -1,3 +1,6 @@
+<div class="row sign_form" style="    background-color: #c3c3c3;">
+
+<div class="col-lg-6 col-lg-offset-3 login1">
 <%= form_with(model: slider, local: true) do |form| %>
   <% if slider.errors.any? %>
     <div id="error_explanation">
@@ -13,25 +16,26 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :slider_name %>
+    <%= form.text_field :name, id: :slider_name , class: "form form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :slider_description %>
+    <%= form.text_area :description, id: :slider_description , class: "form form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.file_field :image, id: :slider_image %>
+    <%= form.file_field :image, id: :slider_image , class: "form form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :state %>
-    <%= form.check_box :state, id: :slider_state %>
+    <%= form.check_box :state, id: :slider_state  , class: "form form-control"%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", class: "btn btn-primary"  %>
   </div>
 <% end %>
+  </div>  </div>

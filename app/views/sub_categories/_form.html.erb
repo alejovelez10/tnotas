@@ -1,3 +1,7 @@
+
+<div class="row sign_form" style="    background-color: #c3c3c3;">
+
+<div class="col-lg-6 col-lg-offset-3 login1">
 <%= form_with(model: sub_category, local: true) do |form| %>
   <% if sub_category.errors.any? %>
     <div id="error_explanation">
@@ -11,46 +15,43 @@
     </div>
   <% end %>
 
-  <div class="field">
+   <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :sub_category_name %>
+    <%= form.text_field :name, id: :sub_category_name, class: "form form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :sub_category_description %>
+    <%= form.text_area :description, id: :sub_category_description, class: "form form-control" %>
   </div>
 
-  <div class="field">
+ <div class="form-group">
     <%= form.label :image %>
-    <%= form.text_field :image, id: :sub_category_image %>
+    <%= form.file_field :image, id: :sub_category_image, class: "form form-control" %>
   </div>
 
-  <div class="field">
+   <div class="form-group">
     <%= form.label :state %>
-    <%= form.check_box :state, id: :sub_category_state %>
+    <%= form.check_box :state, id: :sub_category_state , class: "form form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :icon %>
-    <%= form.text_field :icon, id: :sub_category_icon %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :sub_category_user_id %>
+    <%= form.text_field :icon, id: :sub_category_icon, class: "form form-control" %>
   </div>
 
 
-  <div class="field">
+
+  <div class="form-group">
                <%= form.label "Categoria" %><br>
                <%= form.select :category_id,
                  Category.all.map { |u| [u.name, u.id] },
-                             { class: ''  }
+                             { class: 'form form-control'  }
                   %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", class: "btn btn-primary"%>
   </div>
 <% end %>
+  </div>  </div>

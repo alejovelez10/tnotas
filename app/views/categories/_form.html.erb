@@ -1,3 +1,8 @@
+
+
+<div class="row sign_form" style="    background-color: #c3c3c3;">
+
+<div class="col-lg-6 col-lg-offset-3 login1">
 <%= form_with(model: category, local: true) do |form| %>
   <% if category.errors.any? %>
     <div id="error_explanation">
@@ -11,32 +16,33 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :category_name %>
+    <%= form.text_field :name, id: :category_name, class: "form form-control" %>
   </div>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :category_description %>
+    <%= form.text_area :description, id: :category_description, class: "form form-control" %>
   </div>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :image %>
-    <%= form.file_field :image, id: :category_image %>
+    <%= form.file_field :image, id: :category_image, class: "form form-control" %>
   </div>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :state %>
-    <%= form.check_box :state, id: :category_state %>
+    <%= form.check_box :state, id: :category_state, class: "form form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :icon %>
-    <%= form.text_field :icon, id: :category_icon %>
+    <%= form.text_field :icon, id: :category_icon, class: "form form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Guardar", class: "btn btn-primary" %>
   </div>
 <% end %>
+</div></div>
