@@ -1,6 +1,7 @@
 <div class="row primeros-productos" style="margin-top:0px;">
    <div class="col-md-12">
       <h2><%=@subcategoria.category.name.upcase%> - <%=@subcategoria.name%></h2>
+      <%=link_to "Volver", show_categoria_path(@subcategoria.category.id) , style:"font-size:16px;color:orange"%>
    <br>
    </div>
 

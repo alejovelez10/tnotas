@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post 'create_contact', to: 'contacts#create_contact', as: "create_contact"
 
   get 'show_subCategoria/:id', to: 'home#show_subCategoria', as: "show_subCategoria" 
+  get 'show_categoria/:id', to: 'home#show_categoria', as: "show_categoria" 
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
