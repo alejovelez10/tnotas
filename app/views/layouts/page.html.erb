@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Tnotas</title>
+      <%= csrf_meta_tags %>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+   </head>
+   <body>
+   <div class="">
+      
+  
+      <nav class="navbar navbar-default second-navbar" style="margin-bottom: 0px;">
+         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                  <li  class="li"><p><img src="../../images/wp.png" style = "width: 40px" alt=""> 310 4900965 - 3103471234 / <i class="fa fa-envelope" aria-hidden="true" style="font-size:15px;"></i> ventastnotas@gmail.com</p></li>
+                  </li>
+                  <li class="li">
+                  </li>
+                  <li class="li">
+                  </li>
+                  <li class="li">
+                  </li>
+                  
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+               <li><%=link_to "Inicio", root_path %></li>
+               <li><%=link_to "Nosotros", about_us_path %></li>
+               <li><%=link_to "Domicilios", root_path %></li>
+               <li><%=link_to "Contactanos", root_path %></li>
+               <li><%=link_to "Catalogos", catalogs_path %></li>
+
+                  
+                 
+                  
+               </ul>
+               <!--<form class="navbar-form navbar-left">
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                  </form>-->
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container-fluid -->
+      </nav>
+      <div class="row top-log">
+      <img src="https://icon-icons.com/icons2/434/PNG/512/cobweb_42777.png" style="width:100px;    width: 100px;
+    position: absolute;
+    top: 40px;" alt="">
+    <img src="https://icon-icons.com/icons2/434/PNG/512/cobweb_42777.png" style="width:100px;    width: 100px;
+    position: absolute;
+    top: 40px;right:0px" alt="">
+
+         <div class="col-md-6 text-center">
+              <img src="../../images/logo.jpg" alt="" style="margin-left:20px;margin-top: 20px;margin-bottom: 20px;">
+              <img src="https://2.bp.blogspot.com/-V6M-Piijj3k/V-JBQ_9GenI/AAAAAAAAAU8/MsB7B9vXVs0u3qvxfIo0gFBk6zR7gc_bwCLcB/s0/El%2Bdesastre%2Bde%2BMar%25C3%25ADa_%2BPNG%2Bde%2BHalloween%25281%2529.png" style="    width: 105px;" alt="">
+         </div>
+         <div class="col-md-6">
+
+     
+    <div class="row">
+     <div class="col-md-12">
+    <div class="col-md-12">
+ 
+
+<form>
+
+<input class = "form form-control" style="margin-left:100px;margin-top:80px;width:200px;display:inline-block" type="text" value="Buscar..." onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}" />
+<input  class="btn btn-default" type="button" value="Ir" />
+</form>
+    </div>
+
+       </div>
+    </div>
+  
+
+    
+         <img src="https://www.expertmarket.com/sites/default/files/filemanager/halloween" style="width:470px;    position: relative;display: none;
+    top: 20px;" alt="">
+         </div>
+      </div>
+      <br>
+
+      <%= yield %>
+      <div class="row footer">
+      <div class="col-md-4">
+         <img src="../../images/logo.jpg" alt="" style="margin-left:20px;margin-top: 20px;margin-bottom: 20px;">
+      </div>
+
+            <div class="col-md-4">
+            <h3 style = "color:white">INFORMACION GENERAL</h3>
+        <p><img src="../../images/wp.png" style = "width: 40px" alt=""> 310 4900965 - 3103471234</p>
+        <p><i class="fa fa-phone" aria-hidden="true" style="font-size:20px;"></i> 5115060</p>
+        <p><i class="fa fa-building" aria-hidden="true" style="font-size:20px;"></i> ventastnotas@gmail.com</p>
+        <p><i class="fa fa-envelope" aria-hidden="true" style="font-size:16px;"></i> CRA 56 #48-29 BODEGA 803 CENTRO COMERCIAL MOLINO VIEJO MEDELLIN</p>
+      </div>
+
+            <div class="col-md-4">
+            <h3 style = "color:white">CONTACTANOS</h3>
+                  <%= form_tag create_contact_path, method: :post, remote:true do%>
+            <div class="col-md-6">
+               <div class="form-group">
+                  <%= label_tag "Nombre" %>
+                  <%= text_field_tag :name , nil, class: "form form-control" %>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="form-group">
+                  <%= label_tag "Email" %>
+                  <%= text_field_tag :email , nil, class: "form form-control" %>
+               </div>
+            </div>
+            <div class="col-md-12">
+               <div class="form-group">
+                  <%= label_tag "Mensaje" %>
+                  <%= text_area_tag :description ,nil, class: "form form-control erase", style:"height:50px" %>
+               </div>
+            </div>
+           
+            <div class="col-md-3" >
+               <%= submit_tag "Enviar", class: "btn btn-primary"%>
+            </div>
+            <div class="col-md-9" >
+               <div class="alert alert-success" style="margin-top:5px;display:none">
+                  Tu pregunsta se envio con exito.
+               </div>
+            </div>
+            <%end%>
+      </div>
+        
+      </div>
+      </div>
+
+      
+
+        <div class="social">
+        <ul>
+            <li><a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+            <li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+            <li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+         
+        </ul>
+    </div>
+
+
+   </body>
+</html>
+
+<style>
+.footer
+{
+ 
+   padding: 45px 20px;
+  border: 5px solid orange;
+    color: white;
+    background: 1f1f1f;
+}
+.top-log
+{
+  
+  
+}
+.social {
+
+   position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+   right: 0; /* Establecemos la barra en la izquierda */
+   top: 220px; /* Bajamos la barra 200px de arriba a abajo */
+   z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+.social .fa
+{
+
+    font-size: 30px;
+}
+ .navbar-nav .fa
+ {
+  
+ }
+  .navbar-nav a
+ {
+     
+   font-size: 16px;
+       color: #6d6d6d;
+    width: 150px;
+    text-align: center;
+   
+ }
+   .social ul {
+      list-style: none;
+      padding:0px;
+   }
+ 
+   .social ul li a {
+      display: inline-block;
+      color:#fff;
+      background: #000;
+     padding: 4px 8px;
+      text-decoration: none;
+      -webkit-transition:all 500ms ease;
+      -o-transition:all 500ms ease;
+      transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+   }
+ 
+   .social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+   .social ul li .icon-twitter {background: #00abf0;}
+   .social ul li .icon-googleplus {background: #d95232;}
+   .social ul li .icon-pinterest {background: #ae181f;}
+   .social ul li .icon-mail {background: #666666;}
+ 
+   .social ul li a:hover {
+      background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+      padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+   }
+@media (min-width: 1200px)
+{
+.container {
+    width: 1226px;
+}
+ }  
+
+
+</style>

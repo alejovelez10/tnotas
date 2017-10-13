@@ -1,2 +1,113 @@
-<h1>Home#contact_us</h1>
-<p>Find me in app/views/home/contact_us.html.erb</p>
+ 
+<div class="row primeros-productos" style="margin:0px 0 80px 0;">
+<div class="col-md-12 titulo">
+      <h2>CONTACTENOS</h2>
+   <br>
+  </div>
+<div class="row sign_form" style="">
+<div class="col-md-6" style="padding:50px">
+<h1>¿NECESITAS AYUDA?</h1>
+
+<p>Si quieres saber mas sobre nuestros productos no dudes en escribirnos por este medio o al correo ventastnotas@gmail.com</p>
+
+
+</div>
+<div class="col-md-6  login1" style="background:#f1f1f1">
+ <%= form_tag create_contact_path, method: :post, remote:true do%>
+            <div class="col-md-6">
+               <div class="form-group">
+                  <%= label_tag "Nombre" %>
+                  <%= text_field_tag :name , nil, class: "form form-control" %>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="form-group">
+                  <%= label_tag "Email" %>
+                  <%= text_field_tag :email , nil, class: "form form-control" %>
+               </div>
+            </div>
+            <div class="col-md-12">
+               <div class="form-group">
+                  <%= label_tag "Mensaje" %>
+                  <%= text_area_tag :description ,nil, class: "form form-control erase", style:"height:100px" %>
+               </div>
+            </div>
+           
+            <div class="col-md-12" >
+               <%= submit_tag "Enviar", class: "btn btn-primary todos"%>
+            </div>
+            <div class="col-md-9" >
+               <div class="alert alert-success" style="margin-top:5px;display:none">
+                  Tu pregunsta se envio con exito.
+               </div>
+            </div>
+            <%end%>
+                  </div>
+            </div></div>
+
+
+            <style>
+            .info
+{
+   padding: 10px 130px;
+   text-align: justify;
+}
+.info p
+{
+   font-size: 16px;
+}
+.info h1
+
+{
+   width: 200px;
+   text-align: center;
+   font-size: 20px;
+       background: orange;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+  .primeros-productos
+   {  
+   margin-top: 50px;
+   padding: 0px 40px;
+   margin-bottom: 50px;
+   }
+   .titulo
+   
+ {
+  margin-bottom: 20px;
+ background: linear-gradient( rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.65) ), url('../../images/showtnotas.jpg');
+  
+  
+    color: white;
+}
+   }
+   .primeros-productos img
+   {
+   width: 100px;
+   
+   }
+   .primeros-productos .col-md-3
+   {
+   border: 1px solid #d2d2d2;
+   padding: 15px 0 0 0;
+   text-align: center;
+   margin-bottom: 20px;
+   }
+   h3
+   {
+   color:gray; 
+   }
+   h2
+   {
+  
+
+   color: gray;
+   margin: 40px 0 40px;
+   color:#ff9000;
+   font-weight: bold;
+   }
+  
+               
+            </style>

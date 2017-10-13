@@ -19,6 +19,10 @@ class HomeController < ApplicationController
   	
   end
 
+  def show_subCategoria
+    @subcategoria = SubCategory.find(params[:id])
+  end
+
   def about_us
   end
 
