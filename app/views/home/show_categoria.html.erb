@@ -1,13 +1,13 @@
 <div class="row primeros-productos" style="margin-top:0px;">
    <div class="col-md-12 ban">
       <h2><%=@categoria.name.upcase%></h2>
-      <%=link_to "Volver", root_path , style:"font-size:16px;color:orange; margin-top:15px;"%>
+      <%=link_to "Volver", root_path , style:"font-size:16px;color:orange;"%>
       <br>
    </div>
    <div class="row">
       <div class="col-md-12">
          <% @categoria.sub_categories.each do |sub_cat| %>
-         <%=link_to "#{sub_cat.name}", show_subCategoria_path(sub_cat.id), class: "btn btn-primary", style: "    background: orange;border: 1px;"%>
+         <%=link_to "#{sub_cat.name}", show_subCategoria_path(sub_cat.id), class: "btn btn-primary", style: "    background: orange;border: 1px;margin-top:15px;"%>
          <%end%>
       </div>
    </div>
