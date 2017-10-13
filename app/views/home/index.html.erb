@@ -121,7 +121,7 @@
        
    <% @destacados.each  do  |sobre| %>
    <div class="col-md-3">
-      <%=image_tag sobre.image_url%>
+      <%=image_tag sobre.image_url, style:"width:200px;"%>
       <h3><%= sobre.name%></h3>
    </div>
    <%end%>
