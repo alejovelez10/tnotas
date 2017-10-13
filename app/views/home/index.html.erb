@@ -109,6 +109,28 @@
    <%end%>
 
 </div>
+
+<div class="row catalogos" >
+   <div class="col-md-12">
+      <h2>
+         <p>Productos Destacados</p>
+        
+      </h2>
+   </div>
+    
+       
+   <% @destacados.each  do  |sobre| %>
+   <div class="col-md-3">
+      <%=image_tag sobre.image_url%>
+      <h3><%= sobre.name%></h3>
+   </div>
+   <%end%>
+ 
+
+   <div class="col-md-12 text-center">
+    <%=link_to "Ver Todos", show_subCategoria_path(@sobres_c.first.id), class:"btn btn-primary todos"%>
+  </div>
+</div>
 <div class="row primeros-productos">
    <div class="col-md-12">
       <h2>Linea de Cosmeticos<br><br><img style = "width:150px;height:50px;" src="../../images/logo-orly.png" alt=""></h2>

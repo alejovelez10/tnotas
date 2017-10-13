@@ -30,16 +30,22 @@
   </div>
 
   <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-4">
       <div class="field">
     <%= form.label :state %>
     <%= form.check_box :state, id: :product_state, class: "form form-control" %>
   </div>
   </div>
-   <div class="col-lg-6">
+   <div class="col-lg-4">
      <div class="field">
     <%= form.label :show_index %>
     <%= form.check_box :show_index, id: :product_show_index, class: "form form-control" %>
+  </div>
+  </div>
+  <div class="col-lg-4">
+     <div class="field">
+    <%= form.label "Destacado" %>
+    <%= form.check_box :outstanding, id: :product_outstanding, class: "form form-control" %>
   </div>
   </div>
     

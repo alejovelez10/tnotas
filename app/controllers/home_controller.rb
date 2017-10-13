@@ -14,7 +14,7 @@ class HomeController < ApplicationController
     @cat_sobres = Category.where(name: "Lluvia de Sobres").first
     @sobres_c = SubCategory.where(category_id: @cat_sobres.id)
     
- 
+    @destacados = Product.where(outstanding: true)
 
   	
   end
