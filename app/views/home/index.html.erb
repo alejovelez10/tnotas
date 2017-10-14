@@ -58,7 +58,7 @@
             <div class="item <%= 'active' if a == 0%>">
                <%= image_tag slide.image_url %>
                <div class="verdiv">
-                  <a class="ver btn btn-primary" href="" class="btn btn-primary">Ver Catalogo</a>
+                  <a class="ver btn btn-primary" href="<%=slide.name%>" class="btn btn-primary"><%=slide.description%></a>
                </div>
             </div>
             <% a = a + 1
@@ -121,15 +121,13 @@
        
    <% @destacados.each  do  |sobre| %>
    <div class="col-md-3">
-      <%=image_tag sobre.image_url, style:"width:200px;"%>
+      <%=image_tag sobre.image_url%>
       <h3><%= sobre.name%></h3>
    </div>
    <%end%>
  
 
-   <div class="col-md-12 text-center">
-    <%=link_to "Ver Todos", show_subCategoria_path(@sobres_c.first.id), class:"btn btn-primary todos"%>
-  </div>
+
 </div>
 <div class="row primeros-productos">
    <div class="col-md-12">
