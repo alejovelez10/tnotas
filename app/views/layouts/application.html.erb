@@ -158,7 +158,9 @@
          </div>
            
          </div>
-         <div class="row footer">
+         <div class="row footer" style="margin-left: 0px !important;
+margin-right: 0px !important;" 
+">
             <div class="col-md-4">
                <img src="../../images/logo.jpg" alt="" style="margin-left:20px;margin-top: 20px;margin-bottom: 20px;">
             </div>
@@ -191,7 +193,7 @@
                   </div>
                </div>
                <div class="col-md-3" >
-                  <%= submit_tag "Enviar", class: "btn btn-primary todos"%>
+                  <%= submit_tag "Enviar", class: "btn btn-primary ver"%>
                </div>
                <div class="col-md-9" >
                   <div class="alert alert-success" style="margin-top:5px;display:none">
@@ -216,7 +218,12 @@
       </div>
    </body>
 </html>
-<style>    
+<style>  
+.row
+{
+   margin-left: 0px !important;
+margin-right: 0px !important;
+}  
    .banner
    {
     background: orange;
@@ -230,14 +237,16 @@
    }
    .footer
    {
-   padding: 45px 20px;
+   padding: 45px 20px !important;
 
+      
    color: #636363;
    background: #f9f9f9;
    }
    .footer h3
    {
    color: #636363 !important;
+     background: #f9f9f9;
    }
    .top-log
    {

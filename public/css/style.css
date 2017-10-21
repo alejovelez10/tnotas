@@ -2402,7 +2402,7 @@ select.country + .select2 .select2-selection--single .select2-selection__arrow {
 
 .portfolio-slider .portfolio-item {
   float: none;
- width:     height: 392px;
+  height: 392px;
 
 }
 
@@ -2469,14 +2469,14 @@ select.country + .select2 .select2-selection--single .select2-selection__arrow {
 
 .portfolio-item > * {
   width: 100%;
-  height: 100%;
+
   margin: 0;
 }
 
 .portfolio-item .portfolio-media {
   position: relative;
   display: inline-block;
-  margin-bottom: 25px;
+
 }
 
 .portfolio-item h5 {
