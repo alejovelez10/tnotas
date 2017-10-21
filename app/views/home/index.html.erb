@@ -110,25 +110,7 @@ margin:0px !important;
 
 </div>
 
-<div class="row catalogos" >
-   <div class="col-md-12">
-      <h2>
-         <p>Productos Destacados</p>
-        
-      </h2>
-   </div>
-    
-       
-   <% @destacados.each  do  |sobre| %>
-   <div class="col-md-3">
-      <%=image_tag sobre.image_url%>
-      <h3><%= sobre.name%></h3>
-   </div>
-   <%end%>
- 
 
-
-</div>
 
 <%= render "slider", destacados: @destacados%>
 
