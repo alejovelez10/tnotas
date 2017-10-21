@@ -2,7 +2,7 @@
 <div class="col-md-12 text-center" >
 <p style = "  padding: 0px 0px;
 margin:0px !important;
-        font-size: 40px;
+        font-size: 35px;
     color: white;
     background: orange;
     font-family: 'Gloria Hallelujah', cursive;
@@ -13,16 +13,16 @@ margin:0px !important;
 
 
 <div class="row first" style="box-shadow: 0 -3px 12px -5px #333;" >
-   <div class="col-md-2 categorias">
-      <br>
+   <div class="col-md-3 categorias" style="width:20%">
+   
       <div id='cssmenu1' style="z-index: -10">
          <ul>
-            <li class = "cat" style="background:#ff9000 !important;"><a href='#'><span style="color:white !important;">CATEGORIAS</span></a></li>
+   
 
            <% @categories.each do |cat|%>
                   
             <li class='has-sub'>
-               <a href='show_categoria/<%=cat.id%>'><span><%=cat.icon.html_safe%></i> <%=cat.name.upcase%></span></a>
+               <a href='show_categoria/<%=cat.id%>'><span"><%=cat.icon.html_safe%></i> &nbsp; <%=cat.name.upcase%></span></a>
                <ul>
               <% cat.sub_categories.each do |sub_cat|%>
                   <li><a href='show_subCategoria/<%=sub_cat.id%>'><span><%=sub_cat.name.upcase%></span></a></li>
@@ -37,7 +37,7 @@ margin:0px !important;
          </ul>
       </div>
    </div>
-   <div class="col-md-10 slider-col" style = "padding: 0px 0px 20px 50px;">
+   <div class="col-md-9 slider-col" style = "padding: 0px 0px 20px 0px;width:80%">
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel" style="       box-shadow: gray 0px 2px 11px 3px;">
          <!-- Indicators -->
@@ -173,6 +173,7 @@ margin:0px !important;
 </div>
 <style>
 
+
 .glyphicon-chevron-left:before 
    {
     background: gray !important;
@@ -261,7 +262,9 @@ margin:0px !important;
    @import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
    /* Please Keep this font import at the very top of any CSS file */
    @charset "UTF-8";
-   /* Starter CSS for Flyout Menu */
+   /* Starter CSS for F
+   lyout Menu 
+   */
    #cssmenu1 {
    padding: 0;
    margin: 0;
@@ -329,7 +332,7 @@ margin:0px !important;
    }
    /* Custom CSS Styles */
    #cssmenu1 {
-   width: 200px;
+   width: 220px;
    background: #ffffff;
    font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
    zoom: 1;
@@ -352,14 +355,15 @@ margin:0px !important;
    text-transform: uppercase;
    }
    #cssmenu1 > ul {
-   width: 200px;
+   width: 240px;
    }
    #cssmenu1 ul ul {
    width: 200px;
    }
    #cssmenu1 > ul > li > a {
    border-right: 1px solid #eaeaea;
-   color:#8c8c8c;
+      color: #848484;
+    font-weight: bold;
    border-bottom: 1px solid #eaeaea;
    border-left: 1px solid #eaeaea;
    }
@@ -515,7 +519,7 @@ margin:0px !important;
    background: rgba(128, 128, 128, 0.3);
    padding: 20px 40px;
    }    .first{
-      padding: 0px 50px 0px 50px;    
+      padding: 0px 10px 0px 10px;    
     }
    .slider-col{
      padding: 0px 0px 20px 50px;
