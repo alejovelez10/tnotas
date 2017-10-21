@@ -2402,11 +2402,12 @@ select.country + .select2 .select2-selection--single .select2-selection__arrow {
 
 .portfolio-slider .portfolio-item {
   float: none;
-  overflow: auto;
+ width:     height: 392px;
+
 }
 
 .portfolio-slider .portfolio-item h5 {
-  color: #fff;
+  color: gray;
 }
 
 .portfolio {
