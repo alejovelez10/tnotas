@@ -129,6 +129,12 @@ margin:0px !important;
 
 
 </div>
+
+<%= render "slider", destacados: @destacados%>
+
+
+
+
 <div class="row primeros-productos">
    <div class="col-md-12">
       <h2>Linea de Cosmeticos<br><br><img style = "width:150px;height:50px;" src="../../images/logo-orly.png" alt=""></h2>
@@ -158,7 +164,7 @@ margin:0px !important;
 
   <%end%>
   <div class="col-md-12 text-center">
-    <%=link_to "Ver Todos", show_subCategoria_path(@cuadernos_c.first.id), class:"btn btn-primary todos"%>
+    <%=link_to "Ver Todos", show_subCategoria_path(@cuadernos_c.first.id), class:"btn btn-primary ver"%>
   </div>
    
 </div>
@@ -180,7 +186,7 @@ margin:0px !important;
   <%end%>
 
    <div class="col-md-12 text-center">
-    <%=link_to "Ver Todos", show_subCategoria_path(@sobres_c.first.id), class:"btn btn-primary todos"%>
+    <%=link_to "Ver Todos", show_subCategoria_path(@sobres_c.first.id), class:"btn btn-primary ver"%>
   </div>
 </div>
 <style>
@@ -509,10 +515,10 @@ margin:0px !important;
    }
    .ver
    {
-   background: orange;
-   border: 1px solid white;
-   font-size: 19px;
-   font-weight: bold;
+   background: orange !important;
+   border: 1px solid white !important;
+   font-size: 19px !important;
+   font-weight: bold !important;
    }
    .verdiv
    {

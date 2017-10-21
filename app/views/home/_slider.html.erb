@@ -1,0 +1,36 @@
+      <link type="text/css" href="../../css/lib/bootstrap.min.css" rel="stylesheet">    <!-- Font Icon -->
+      <link type="text/css" href="../../css/lib/font-awesome.min.css" rel="stylesheet">
+      <link type="text/css" href="../../css/lib/owl.carousel.css" rel="stylesheet">
+   <link type="text/css" href="../../css/style.css" rel="stylesheet">
+
+      <section class="section pt-60 pb-60 bg-parallax" data-background="../../img/bg/portfolio.jpg">
+        <div class="bg-overlay-black bg-overlay-7"></div>
+        <div class="container">
+            <h2 class="" style = "color:orange" data-section-center="991">Productos Destacados</h2>
+            
+        </div><!-- /container -->
+
+        <div class="portfolio-slider">
+            
+              <% destacados.each  do  |sobre| %>
+ <div class="portfolio-item">
+                <div class="portfolio-media hover-link">
+                      <%=image_tag sobre.image_url%>
+    
+                   
+                </div><!-- /hover-link -->
+                <h5 class="text-uppercase text-center"><a href="work-single.html"><%= sobre.name%></a></h5>
+            </div><!-- /portfolio-item -->
+   <%end%>
+
+
+
+           
+        </div><!-- /portfolio-slider -->
+    </section>
+
+      <script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript" src="../../js/lib/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="../../js/lib/jquery.parallax-1.1.3.js"></script>
+
+      <script type="text/javascript" src="../../js/scripts.js"></script>
