@@ -81,7 +81,7 @@ margin:0px !important;
 <div class="row" style="background: #f9f9f9;    padding-bottom: 27px;">
       <div class="col-md-12">
       <br>
-      <h2 style="margin: 0px">Proveedores</h2>
+      <h2 style="margin: 0px">PROVEEDORES</h2>
    </div>
    <div class="col-md-12 text-center" style="padding:0px 20px">
       <br><br>
@@ -96,7 +96,7 @@ margin:0px !important;
 </div>
 <div class="row catalogos" >
    <div class="col-md-12">
-      <h2>Catalogos</h2>
+      <h2>CATALOGOS</h2>
    </div>
    <% @catalogs.each do |cat|%>
    <div class="col-md-3">
@@ -119,7 +119,7 @@ margin:0px !important;
 
 <div class="row primeros-productos">
    <div class="col-md-12">
-      <h2>Linea de Cosmeticos<br><br><img style = "width:150px;height:50px;" src="../../images/logo-orly.png" alt=""></h2>
+      <h2>LINEA DE COSMETICOS</h2>
    </div>
   <% @cosmetics_c.each do |cc| %>
    <% cc.products.where(show_index:true).each do |cos| %>
@@ -134,7 +134,7 @@ margin:0px !important;
 </div>
 <div class="row catalogos" >
    <div class="col-md-12">
-      <h2>Cuadernos Tnotas<br><br><img style = "width:150px;height:50px;" src="../../images/logo.jpg" alt=""></h2>
+      <h2>CUADERNOS TNOTAS</h2>
    </div>
    <% @cuadernos_c.each do |cua| %>
    <%cua.products.where(show_index:true).each do  |cuaderno| %>
@@ -153,8 +153,8 @@ margin:0px !important;
 <div class="row sobres" >
    <div class="col-md-12">
       <h2>
-         <p>Lluvia de sobres para todas las ocasiones</p>
-         <br><img style = "width:150px;height:50px;" src="../../images/logo-pupi.png" alt="">
+         <p>LLUVIA DE SOBRES PARA TODAS LAS OCACIONES</p>
+         
       </h2>
    </div>
     
@@ -253,10 +253,10 @@ margin:0px !important;
    h2
    {
    text-align: center;
-
-   color: gray;
-   margin: 40px 0 40px;
-   color:#ff9000;
+    font-family: 'Architects Daughter', cursive;
+     background: #ff9000;
+    padding: 4px;
+    color: #ffffff;
    font-weight: bold;
    }
    @import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
