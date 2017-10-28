@@ -20,6 +20,9 @@
 body
 {
 	font-family: 'Poppins' , sans-serif !important;
+    background: linear-gradient( rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93) ), 
+ url('../../images/fondo2.jpg') center top;
+
 }
    h3
    {

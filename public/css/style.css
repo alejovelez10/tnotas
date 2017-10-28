@@ -306,33 +306,6 @@ html .bg-color {
   background-color: #ffbf00;
 }
 
-.bg-overlay-black:before {
-  background-color: #000;
-}
-
-.bg-overlay-dark:before {
-  background-color: #333;
-}
-
-.bg-gray {
-  background-color: #f9f9f9 !important;
-}
-
-.bg-white {
-  background-color: #fff !important;
-}
-
-.bg-black {
-  background-color: #000 !important;
-}
-
-.bg-dark {
-  background-color: #222 !important;
-}
-
-.bg-primary {
-  background-color: #5e9bbb !important
-}
 
 [class*="bg-overlay-"] {
   position: absolute;
@@ -350,12 +323,6 @@ html .bg-color {
   height: 100%;
   top: 0;
   left: 0;
-}
-
-
-.bg-overlay-7:before {
-background: white;
-
 }
 
 
