@@ -16,6 +16,7 @@ class HomeController < ApplicationController
     
     @destacados = Product.where(outstanding: true)
 
+@some_products = SomeProduct.where(state: true)
   	
   end
 

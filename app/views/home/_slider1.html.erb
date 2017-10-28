@@ -6,13 +6,13 @@
       <section class="section pt-60 pb-60 bg-parallax " data-background="../../img/bg/portfolio.jpg">
         <div class="bg-overlay-black bg-overlay-7"></div>
         <div class="container text-center" style="margin-bottom:60px;">
-            <h2 data-section-center="991" style="color:orange">PRODUCTOS DESTACADOS</h2>
+            <h2 data-section-center="991" style="color:orange">NOVEDADES</h2>
             
         </div><!-- /container -->
 
         <div class="portfolio-slider">
             
-              <% destacados.each  do  |sobre| %>
+              <% some_products.each  do  |sobre| %>
  <div class="portfolio-item" style="    padding: 22px;
     border: 1px solid #c3c3c3;">
                 <div class="portfolio-media hover-link">
@@ -20,7 +20,7 @@
     
                    
                 </div><!-- /hover-link -->
-                <h3 class="text-center"><a href="work-single.html"><%= sobre.name%></a></h3>
+                
             </div><!-- /portfolio-item -->
    <%end%>
 
@@ -28,6 +28,7 @@
 
            
         </div><!-- /portfolio-slider -->
+        
     </section>
 
       <script type="text/javascript" src="../../js/lib/jquery-1.11.3.min.js"></script>
@@ -35,3 +36,5 @@
       <script type="text/javascript" src="../../js/lib/jquery.parallax-1.1.3.js"></script>
 
       <script type="text/javascript" src="../../js/scripts.js"></script>
+
+

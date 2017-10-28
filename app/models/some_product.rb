@@ -1,17 +1,17 @@
 # == Schema Information
 #
-# Table name: categories
+# Table name: some_products
 #
 #  id          :integer          not null, primary key
 #  name        :string
-#  description :text
-#  image       :string
+#  description :string
+#  user_id     :integer
 #  state       :boolean
-#  icon        :string
+#  image       :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
-class Category < ApplicationRecord
-	has_many :sub_categories
+class SomeProduct < ApplicationRecord
+	mount_uploader :image, SomeProductUploader
 end

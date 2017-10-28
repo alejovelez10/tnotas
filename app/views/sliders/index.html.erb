@@ -2,7 +2,7 @@
 
 <h1>Sliders</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,7 +18,7 @@
       <tr>
         <td><%= slider.name %></td>
         <td><%= slider.description %></td>
-        <td><%= slider.image %></td>
+        <td><%= image_tag slider.image_url, style: "width:100px;" %></td>
         <td><%= slider.state %></td>
         <td><%= link_to 'Show', slider %></td>
         <td><%= link_to 'Edit', edit_slider_path(slider) %></td>

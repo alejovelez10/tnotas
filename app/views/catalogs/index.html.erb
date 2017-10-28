@@ -18,7 +18,7 @@
       <tr>
         <td><%= catalog.name %></td>
         <td><%= catalog.description %></td>
-        <td><%= catalog.image %></td>
+        <td><%= image_tag catalog.image_url, style: "width:100px;" %></td>
         <td><%= catalog.state %></td>
         <td><%= link_to 'Show', catalog %></td>
         <td><%= link_to 'Edit', edit_catalog_path(catalog) %></td>

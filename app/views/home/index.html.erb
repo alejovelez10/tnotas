@@ -1,8 +1,8 @@
 <div class="row">
-<div class="col-md-12 text-center" >
+<div class="col-md-12 text-center somos-m" >
 <p style = "  padding: 0px 0px;
 margin:0px !important;
-        font-size: 35px;
+        
     color: white;
     background: orange;
     font-family: 'Gloria Hallelujah', cursive;
@@ -82,6 +82,7 @@ margin:0px !important;
       <div class="col-md-12 text-center">
       <br>
       <h2 style="margin: 0px">PROVEEDORES</h2>
+      <p class="prov-p"> Mas que proveederos son nuestros aliados estrategicos, los cuales nos permiten brindarle a nuestros clientes, productos de alta calidad y muy buenos precios.<p>
    </div>
    <div class="col-md-12 text-center" style="padding:0px 20px">
       <br><br>
@@ -113,6 +114,9 @@ margin:0px !important;
 
 
 <%= render "slider", destacados: @destacados%>
+
+
+<%= render "slider1", some_products: @some_products%>
 
 
 
@@ -172,10 +176,14 @@ margin:0px !important;
   </div>
 </div>
 <style>
+.somos-m
+{
+  font-size: 35px;
+}
 .catalogos1
 {
     background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) ), 
- url('../../images/fondoazul.jpg')no-repeat center top;
+ url('../../images/fondoazul1.jpg')no-repeat center top;
   background-size: cover;
 }
 
@@ -534,9 +542,22 @@ margin:0px !important;
      padding: 0px 0px 20px 50px;
      width: 80%;
     }
-   @media only screen and (max-width: 700px) {
+    .prov-p
+    {
+    padding: 10px 290px;
+    }
+
+       @media only screen and (max-width: 700px) {
+        .somos-m
+{
+  font-size: 20px;
+}
     .first{
       padding: 0px !important;
+    }
+    .prov-p
+    {
+      padding:0px 0px;
     }
    .slider-col{
      padding: 0px 10px 0px 10px !important;
@@ -551,6 +572,9 @@ margin:0px !important;
     left: 20%;
 
 }
+
+}
+
 </style>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">

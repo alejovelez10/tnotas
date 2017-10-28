@@ -2,7 +2,7 @@
 
 <h1>Products</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -22,7 +22,7 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-        <td><%= product.image %></td>
+           <td><%= image_tag product.image_url, style: "width:100px;" %></td>
         <td><%= product.state %></td>
         <td><%= product.price %></td>
         <td><%= product.show_index %></td>

@@ -18,7 +18,7 @@
       <tr>
         <td><%= supplier.name %></td>
         <td><%= supplier.description %></td>
-        <td><%= supplier.image %></td>
+         <td><%= image_tag supplier.image_url, style: "width:100px;" %></td>
         <td><%= supplier.state %></td>
         <td><%= link_to 'Show', supplier %></td>
         <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
