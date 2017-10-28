@@ -116,9 +116,20 @@ margin:0px !important;
 <%= render "slider", destacados: @destacados%>
 
 
-<%= render "slider1", some_products: @some_products%>
+<div class="row primeros-productos catalogos1">
+   <div class="col-md-12 text-center" style="margin-bottom:60px;">
+      <h2>DESTACADOS</h2>
+   </div>
+  <% @some_products.each do |des| %>
+  
+   <div class="col-md-3">
+      <%=image_tag des.image_url%>
+    
+   </div>
+   
+  <%end%>
 
-
+</div>
 
 
 <div class="row primeros-productos">
