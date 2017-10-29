@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@sliders = Slider.where(state:true)
+  	@sliders = Slider.where(state:true).order(updated_at: :desc)
   	@suppliers = Supplier.where(state:true)
   	@catalogs = Catalog.where(state:true)
   	@categories = Category.where(state:true)
@@ -14,7 +14,7 @@ class HomeController < ApplicationController
     @cat_sobres = Category.where(name: "Lluvia de Sobres").first
     @sobres_c = SubCategory.where(category_id: @cat_sobres.id)
     
-    @destacados = Product.where(outstanding: true)
+    @destacados = Product.where(outstanding: true).order(updated_at: :desc)
 
 @some_products = SomeProduct.where(state: true)
   	

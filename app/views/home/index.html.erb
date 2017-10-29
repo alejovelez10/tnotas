@@ -57,9 +57,11 @@ margin:0px !important;
                @sliders.each do  |slide|%>
             <div class="item <%= 'active' if a == 0%>">
                <%= image_tag slide.image_url %>
+               <%if slide.description != nil && slide.description != ""%>
                <div class="verdiv">
                   <a class="ver btn btn-primary" href="<%=slide.name%>" class="btn btn-primary"><%=slide.description%></a>
                </div>
+               <%end%>
             </div>
             <% a = a + 1
                end%>
@@ -118,7 +120,7 @@ margin:0px !important;
 
 <div class="row primeros-productos catalogos1">
    <div class="col-md-12 text-center" style="margin-bottom:60px;">
-      <h2>DESTACADOS</h2>
+      <h2>NOVEDADES</h2>
    </div>
   <% @some_products.each do |des| %>
   
