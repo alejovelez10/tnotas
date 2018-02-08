@@ -46,6 +46,7 @@ gem 'jquery-ui-rails'
 gem "figaro"
 gem 'bootstrap-social-rails'
 gem 'fancybox-rails'
+gem 'rack-cors', :require => 'rack/cors'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
