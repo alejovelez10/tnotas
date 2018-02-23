@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @cosmetics_c = SubCategory.where(category_id: @cat_cosmetics.id)
 
    
-    @cat_cuadernos = Category.where(name: "Papeleria").first
+    @cat_cuadernos = Category.where(name: "Hogar").first
     @cuadernos_c = SubCategory.where(category_id: @cat_cuadernos.id)
     
     @cat_sobres = Category.where(name: "Lluvia de Sobres").first
