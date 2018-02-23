@@ -156,7 +156,7 @@ margin:0px !important;
    <% @cuadernos_c.each do |cua| %>
    <%cua.products.where(show_index:true).each do  |cuaderno| %>
    <div class="col-md-3">
-      <%=image_tag cuaderno.image_url, style: "width:260px"%>
+      <%=image_tag cuaderno.image_url, style: "width:220px"%>
      <!-- <h3><%= cuaderno.name%></h3>-->
    </div>
    <%end%>
