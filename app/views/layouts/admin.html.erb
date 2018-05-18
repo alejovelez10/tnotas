@@ -29,32 +29,18 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-               <ul class="nav navbar-nav">
-                  <li  class="li"><p><img src="../../images/contact.jpg" alt="" style="width:40px"> 5115060 / ventastnotas@gmail.com</p></li>
-                  </li>
-                  <li class="li">
-                  </li>
-                  <li class="li">
-                  </li>
-                  <li class="li">
-                  </li>
-                  
-               </ul>
+
                <ul class="nav navbar-nav navbar-right">
 
                <li><%= link_to "Sliders", sliders_path %></li>
                <li><%= link_to "Catalogos",catalogs_path %></li>
                <li><%= link_to "Categorias",categories_path %></li>
-               <li><%= link_to "Sub Categorias",sub_categories_path %></li>
+               <li><%= link_to "SubCategorias",sub_categories_path%></li>
                <li><%= link_to "Proveedores", suppliers_path %></li>
-                 <li><%= link_to "Varios", some_products_path %></li>
+               <li><%= link_to "Varios", some_products_path %></li>
                <li><%= link_to "Productos", products_path %></li>
-              
-               
-
-                  
-                 
-                  
+               <li><%= link_to "Preguntas", contacts_path %></li>
+            
                </ul>
                <!--<form class="navbar-form navbar-left">
                   <div class="form-group">
@@ -99,11 +85,13 @@
  {
      
    font-size: 16px;
-       color: #6d6d6d;
+    color: #6d6d6d;
     width: 150px;
     text-align: center;
    
  }
+
+   
    .social ul {
       list-style: none;
       padding:0px;
@@ -130,12 +118,22 @@
       background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
       padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
    }
-@media (min-width: 1200px)
-{
-.container {
-    width: 1226px;
-}
- }  
+
+  @media (min-width: 1200px)
+  {
+
+  .container {
+      width: 1226px;
+  }
+  }  
+
+  .navbar-default .navbar-nav  li a:hover{
+    border-bottom: 2px solid;
+    border-color: #000000FF;
+  }
+
+
+
 
 
 </style>
