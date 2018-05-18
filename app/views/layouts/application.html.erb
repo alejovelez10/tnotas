@@ -177,19 +177,19 @@ margin-right: 0px !important;"
                <div class="col-md-6">
                   <div class="form-group">
                      <%= label_tag "Nombre" %>
-                     <%= text_field_tag :name , nil, class: "form form-control" %>
+                     <%= text_field_tag :name , nil, class: "form form-control", :required => true %>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="form-group">
                      <%= label_tag "Email" %>
-                     <%= text_field_tag :email , nil, class: "form form-control" %>
+                     <%= text_field_tag :email , nil, class: "form form-control", :required => true  %>
                   </div>
                </div>
                <div class="col-md-12">
                   <div class="form-group">
                      <%= label_tag "Mensaje" %>
-                     <%= text_area_tag :description ,nil, class: "form form-control erase", style:"height:50px" %>
+                     <%= text_area_tag :description ,nil, class: "form form-control erase", style:"height:50px", :required => true %>
                   </div>
                </div>
                <div class="col-md-3" >
@@ -197,7 +197,7 @@ margin-right: 0px !important;"
                </div>
                <div class="col-md-9" >
                   <div class="alert alert-success" style="margin-top:5px;display:none">
-                     Tu pregunsta se envio con exito.
+                     Tu pregunta se envio con exito.
                   </div>
                </div>
                <%end%>
