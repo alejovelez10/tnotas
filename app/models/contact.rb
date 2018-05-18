@@ -12,4 +12,5 @@
 #
 
 class Contact < ApplicationRecord
+
 end

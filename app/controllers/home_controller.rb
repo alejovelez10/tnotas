@@ -5,14 +5,14 @@ class HomeController < ApplicationController
   	@catalogs = Catalog.where(state:true)
   	@categories = Category.where(state:true)
     @cat_cosmetics = Category.where(name: "Cosmeticos").first
-    @cosmetics_c = SubCategory.where(category_id: @cat_cosmetics.id)
+    @cosmetics_c = @cat_cosmetics != nil ? SubCategory.where(category_id: @cat_cosmetics.id) : [] 
 
    
     @cat_cuadernos = Category.where(name: "Hogar").first
-    @cuadernos_c = SubCategory.where(category_id: @cat_cuadernos.id)
+    @cuadernos_c = @cat_cuadernos != nil ? SubCategory.where(category_id: @cat_cuadernos.id): []
     
-    @cat_sobres = Category.where(name: "Lluvia de Sobres").first
-    @sobres_c = SubCategory.where(category_id: @cat_sobres.id)
+    @cat_sobres =  Category.where(name: "Lluvia de Sobres").first
+    @sobres_c = @cat_cuadernos != nil ? SubCategory.where(category_id: @cat_sobres.id): []
     
     @destacados = Product.where(outstanding: true).order(updated_at: :desc)
 
