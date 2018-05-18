@@ -1,33 +1,33 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Sliders</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>State</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sliders.each do |slider| %>
+<div class="container">
+  <h1 align="center">Sliders</h1>
+  <br>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= slider.name %></td>
-        <td><%= slider.description %></td>
-        <td><%= image_tag slider.image_url, style: "width:100px;" %></td>
-        <td><%= slider.state %></td>
-        <td><%= link_to 'Show', slider %></td>
-        <td><%= link_to 'Edit', edit_slider_path(slider) %></td>
-        <td><%= link_to 'Destroy', slider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Imagen</th>
+        <th>State</th>
+        <th colspan="3" style="text-align: center;">Acciones</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @sliders.each do |slider| %>
+        <tr>
+          <td><%= slider.name %></td>
+          <td><%= slider.description %></td>
+          <td><%= image_tag slider.image_url, style: "width:100px;" %></td>
+          <td><%= slider.state %></td>
+          <td><%= link_to 'Show', slider %></td>
+          <td><%= link_to 'Edit', edit_slider_path(slider) %></td>
+          <td><%= link_to 'Destroy', slider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Slider', new_slider_path, class: "btn btn-primary" %>
+  <br>
+</div>
 
-<%= link_to 'New Slider', new_slider_path %>
