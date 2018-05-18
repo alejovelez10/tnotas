@@ -163,7 +163,7 @@ margin:0px !important;
 
   <%end%>
   <div class="col-md-12 text-center" style="margin-top:70px">
-    <%=link_to "Ver Todos", show_subCategoria_path(@cuadernos_c.first.id), class:"btn btn-primary ver"%>
+    <%=link_to "Ver Todos", show_subCategoria_path(@cuadernos_c.first.id), class:"btn btn-primary ver" if @cuadernos_c.first != nil%>
   </div>
    
 </div>
@@ -185,7 +185,7 @@ margin:0px !important;
   <%end%>
 
    <div class="col-md-12 text-center" style="margin-top:70px">
-    <%=link_to "Ver Todos", show_subCategoria_path(@sobres_c.first.id), class:"btn btn-primary ver"%>
+    <%=link_to "Ver Todos", show_subCategoria_path(@sobres_c.first.id), class:"btn btn-primary ver"  if @sobres_c.first != nil%>
   </div>
 </div>
 <style>
