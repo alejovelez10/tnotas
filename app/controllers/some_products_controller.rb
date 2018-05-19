@@ -1,5 +1,6 @@
 class SomeProductsController < ApplicationController
   before_action :set_some_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /some_products
   # GET /some_products.json
