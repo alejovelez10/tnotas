@@ -74,6 +74,7 @@
                      <li><%=link_to "Nosotros", about_us_path %></li>
                      <li><%=link_to "Domicilios", root_path %></li>
                      <li><%=link_to "Contactanos", contact_us_path %></li>
+                     <li><%=link_to "Administrador", new_user_session_path %></li>
               
                   </ul>
                   <!--<form class="navbar-form navbar-left">
@@ -166,13 +167,13 @@ margin-right: 0px !important;"
             </div>
             <div class="col-md-4">
                <h3 style = "color:white">INFORMACION GENERAL</h3>
-               <p><img src="../../images/wp.png" style = "width: 40px" alt=""> 310 4900965 - 3103471234</p>
+               <p><img src="../../images/wp.png" style = "width: 40px;" alt="" > 310 4900965 - 3103471234</p>
                <p><i class="fa fa-phone" aria-hidden="true" style="font-size:20px;"></i> 5115060</p>
                <p><i class="fa fa-building" aria-hidden="true" style="font-size:20px;"></i> ventastnotas@gmail.com</p>
                <p><i class="fa fa-envelope" aria-hidden="true" style="font-size:16px;"></i> CRA 56 #48-29 BODEGA 803 CENTRO COMERCIAL MOLINO VIEJO MEDELLIN</p>
             </div>
             <div class="col-md-4">
-               <h3 style = "color:white">CONTACTANOS</h3>
+               <h3 style = "color: #FFFFFFFF; margin: 9px;">CONTACTANOS</h3>
                <%= form_tag create_contact_path, method: :post, remote:true do%>
                <div class="col-md-6">
                   <div class="form-group">
@@ -290,10 +291,11 @@ margin-right: 0px !important;
    .social ul li .icon-googleplus {background: #d95232;}
    .social ul li .icon-pinterest {background: #ae181f;}
    .social ul li .icon-mail {background: #666666;}
-   .social ul li a:hover {
-   background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
-   padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
-   }
+
+   .social ul li .icon-facebook:hover {border-top: 2px solid; border-color: black;}/* Cambiamos el fondo cuando el usuario pase el mouse */
+   .social ul li .icon-twitter:hover {border-top: 2px solid; border-color: black;}/* Cambiamos el fondo cuando el usuario pase el mouse */
+   .social ul li .icon-googleplus:hover {border-top: 2px solid; border-color: black;}/* Cambiamos el fondo cuando el usuario pase el mouse */
+
    @media (min-width: 1200px)
    {
    .container {

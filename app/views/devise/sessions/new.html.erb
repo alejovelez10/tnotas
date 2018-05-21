@@ -1,0 +1,36 @@
+<div class="container" style="margin-top: 20px">
+  <div class="col-md-4 col-md-offset-4">
+    <h2 align="center">Administrador</h2>
+    <br>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form form-control" %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :Contraseña %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form form-control"  %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit "Ingresar", class: "btnad" %>
+    </div>
+    <br>
+  <% end %>
+
+
+<%= render "devise/shared/links" %>
+  </div>
+</div>
+<style type="text/css">
+  .btnad{
+    background-color: #FFAA00FF;
+    width: 100%;
+    height: 30px;
+    border: 0px;
+    border-radius: 2px;
+    color: #FFFFFFFF;
+  }
+</style>
+
