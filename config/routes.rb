@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :suppliers
   resources :sliders
   devise_for :users
+  match "*path" => redirect("/"), via: :get 
+
   root 'home#index'
 
   get 'home/about_us', as: "about_us"
