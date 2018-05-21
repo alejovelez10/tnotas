@@ -1,5 +1,6 @@
 class SlidersController < ApplicationController
   before_action :set_slider, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /sliders
   # GET /sliders.json
