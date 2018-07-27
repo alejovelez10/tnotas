@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     @cosmetics_c = @cat_cosmetics != nil ? SubCategory.where(category_id: @cat_cosmetics.id) : [] 
 
    
-    @cat_cuadernos = Category.where(name: "fomy").first
+    @cat_cuadernos = Category.where(name: "Hogar").first
     @cuadernos_c = @cat_cuadernos != nil ? SubCategory.where(category_id: @cat_cuadernos.id): []
     
     @cat_sobres =  Category.where(name: "Lluvia de Sobres").first
