@@ -121,13 +121,13 @@
             <div class="col-md-6">
                <div class="form-group">
                   <%= label_tag "Nombre" %>
-                  <%= text_field_tag :name , nil, class: "form form-control", required: true %>
+                  <%= text_field_tag :name , nil, class: "form form-control"%>
                </div>
             </div>
             <div class="col-md-6">
                <div class="form-group">
                   <%= label_tag "Email" %>
-                  <%= text_field_tag :email , nil, class: "form form-control" %>
+                  <%= email_field_tag :email , nil, class: "form form-control" %>
                </div>
             </div>
             <div class="col-md-12">
@@ -142,7 +142,7 @@
             </div>
             <div class="col-md-9" >
                <div class="alert alert-success" style="margin-top:5px;display:none">
-                  Tu pregunsta se envio con exito.
+                  Tu pregunta se envio con exito.
                </div>
             </div>
             <%end%>

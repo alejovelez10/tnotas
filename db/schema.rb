@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171011214730) do
+ActiveRecord::Schema.define(version: 20171028195233) do
 
   create_table "catalogs", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20171011214730) do
     t.boolean "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "catalog_url"
+    t.string "catalog_attachment"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -27,6 +29,15 @@ ActiveRecord::Schema.define(version: 20171011214730) do
     t.string "image"
     t.boolean "state"
     t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.text "description"
+    t.string "affair"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,6 +53,7 @@ ActiveRecord::Schema.define(version: 20171011214730) do
     t.integer "supplier_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "outstanding"
   end
 
   create_table "products_sub_categories", id: false, force: :cascade do |t|
@@ -51,18 +63,21 @@ ActiveRecord::Schema.define(version: 20171011214730) do
     t.index ["sub_category_id"], name: "index_products_sub_categories_on_sub_category_id"
   end
 
-  create_table "products_sub_categories_associations", force: :cascade do |t|
-    t.integer "product_id"
-    t.integer "sub_category_id"
-    t.index ["product_id"], name: "index_products_sub_categories_associations_on_product_id"
-    t.index ["sub_category_id"], name: "index_products_sub_categories_associations_on_sub_category_id"
-  end
-
   create_table "sliders", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "image"
     t.boolean "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "some_products", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "user_id"
+    t.boolean "state"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
