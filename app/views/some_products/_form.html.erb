@@ -1,6 +1,6 @@
 
 
-<div class="row sign_form" style="    background-color: #c3c3c3;">
+<div class="row sign_form"">
 
 <div class="col-lg-6 col-lg-offset-3 login1">
 <%= form_with(model: some_product, local: true) do |form| %>
@@ -22,17 +22,12 @@
 
   <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :some_product_description, class: "form form-control"  %>
+    <%= form.text_area :description, id: :some_product_description, class: "form form-control"  %>
   </div>
 
 <div class="form-group">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :some_product_user_id , class: "form form-control" %>
-  </div>
-
-<div class="form-group">
-    <%= form.label :state %>
-    <%= form.check_box :state, id: :some_product_state, class: "form form-control"  %>
+    <%= form.label :Estado %><br>
+    <%= form.check_box :state, id: :some_product_state, class: ""  %>
   </div>
 
  <div class="form-group">
@@ -41,8 +36,45 @@
   </div>
   <div class="form-group">
     <%= form.submit "Guardar", class: "btn btn-primary" %>
+    <%= link_to 'Back', some_products_path, class: "volver" %>
   </div>
 <% end %>
-</div></div>
+</div>
 
+<style type="text/css">
+
+  .login1{
+    border-right: 8px solid #FEAD00;
+    border-left: 8px solid #FEAD00;
+  }
+
+  .btn{
+  background-color: #FEAD00;
+  border-color: #FEAD00;
+
+  }
+
+  .btn:hover{
+    background-color: #FEAD00;
+    border-color: #FEAD00;
+
+  }
+
+  .volver{
+    padding: 11px 10px;
+    background-color: #FEAD00;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #f1f1f1;
+
+  }
+
+  .volver:hover{
+    color: black;
+    text-decoration: none;
+    color: #f1f1f1;
+  }
+  
+
+</style>
 

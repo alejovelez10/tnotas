@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
+
   def index
+
   	@sliders = Slider.where(state:true).order(updated_at: :desc)
   	@suppliers = Supplier.where(state:true)
   	@catalogs = Catalog.where(state:true)
@@ -8,15 +10,15 @@ class HomeController < ApplicationController
     @cosmetics_c = @cat_cosmetics != nil ? SubCategory.where(category_id: @cat_cosmetics.id) : [] 
 
    
-    @cat_cuadernos = Category.where(name: "Hogar").first
+    @cat_cuadernos = Category.where(name: "fomy").first
     @cuadernos_c = @cat_cuadernos != nil ? SubCategory.where(category_id: @cat_cuadernos.id): []
     
     @cat_sobres =  Category.where(name: "Lluvia de Sobres").first
     @sobres_c = @cat_cuadernos != nil ? SubCategory.where(category_id: @cat_sobres.id): []
     
     @destacados = Product.where(outstanding: true).order(updated_at: :desc)
-
-@some_products = SomeProduct.where(state: true)
+    @nuevos_productos = Product.where(nuevo: true)
+    @some_products = SomeProduct.where(state: true)
   	
   end
 
