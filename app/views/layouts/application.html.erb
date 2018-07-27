@@ -174,7 +174,7 @@ margin-right: 0px !important;"
             </div>
             <div class="col-md-4">
                <h3 style = "color: #FFFFFFFF; margin: 9px;">CONTACTANOS</h3>
-               <%= form_tag create_contact_path, method: :post, remote:true do%>
+              <%= form_tag create_contact_path, method: :post, remote:true do%>
                <div class="col-md-6">
                   <div class="form-group">
                      <%= label_tag "Nombre" %>
@@ -184,7 +184,7 @@ margin-right: 0px !important;"
                <div class="col-md-6">
                   <div class="form-group">
                      <%= label_tag "Email" %>
-                     <%= text_field_tag :email , nil, class: "form form-control", :required => true  %>
+                     <%= email_field_tag :email , nil, class: "form form-control", :required => true  %>
                   </div>
                </div>
                <div class="col-md-12">
@@ -201,7 +201,7 @@ margin-right: 0px !important;"
                      Tu pregunta se envio con exito.
                   </div>
                </div>
-               <%end%>
+              <%end%>
             </div>
             <div class="col-md-12">
                <hr>

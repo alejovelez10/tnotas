@@ -122,6 +122,7 @@ margin:0px !important;
    <div class="col-md-12 text-center" style="margin-bottom:60px;">
       <h2>NOVEDADES</h2>
    </div>
+
   <% @some_products.each do |des| %>
   
    <div class="col-md-3">
@@ -153,15 +154,13 @@ margin:0px !important;
    <div class="col-md-12 text-center" style="margin-bottom:60px;">
       <h2>PRODUCTOS NUEVOS</h2>
    </div>
-   <% @cuadernos_c.each do |cua| %>
-   <%cua.products.where(show_index:true).each do  |cuaderno| %>
+
+   <% @nuevos_productos.where(nuevo:true).each do  |img| %>
    <div class="col-md-3">
-      <%=image_tag cuaderno.image_url, style: "width:220px"%>
-     <!-- <h3><%= cuaderno.name%></h3>-->
+      <%=image_tag img.image_url, style: "width:220px"%>
    </div>
    <%end%>
 
-  <%end%>
   <div class="col-md-12 text-center" style="margin-top:70px">
     <%=link_to "Ver Todos", show_subCategoria_path(@cuadernos_c.first.id), class:"btn btn-primary ver" if @cuadernos_c.first != nil%>
   </div>

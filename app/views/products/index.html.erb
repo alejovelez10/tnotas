@@ -8,6 +8,7 @@
       <th>Descripcion</th>
       <th>Imagen</th>
       <th>State</th>
+      <th>Nuevo</th>
       <th>Price</th>
       <th>Show index</th>
       <th>User</th>
@@ -21,8 +22,9 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-           <td><%= image_tag product.image_url, style: "width:100px;" %></td>
+        <td><%= image_tag product.image_url, style: "width:100px;" if product.image_url %></td>
         <td><%= product.state %></td>
+        <td><%= product.nuevo %></td>
         <td><%= product.price %></td>
         <td><%= product.show_index %></td>
         <td><%= product.user_id %></td>
@@ -38,4 +40,20 @@
   <%= link_to 'Nuevo Producto', new_product_path, class: "btn btn-primary" %>
 
 </div>
+<br>
+<style type="text/css">
+
+  .btn{
+  background-color: #FEAD00;
+  border-color: #FEAD00;
+
+  }
+
+  .btn:hover{
+    background-color: #FEAD00;
+    border-color: #FEAD00;
+
+  }
+
+</style>
 
